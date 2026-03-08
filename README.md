@@ -167,6 +167,149 @@ The diagram above shows the **decision process when opening files**:
 This decision process leads to selecting the correct **file mode** (`r`, `w`, `a`, `r+`, `w+`, `a+`).
 
 ---
+---
+
+# 🧩 Object-Oriented Programming (OOP) – Quick Recap
+
+Object-Oriented Programming (OOP) is a programming paradigm that organizes code using **objects and classes**.
+It helps make programs **more modular, reusable, and easier to maintain**.
+
+In Python, OOP is widely used when building **large applications, APIs, and scalable systems**.
+
+---
+
+# 🏗️ Core OOP Concepts
+
+## 1️⃣ Classes and Objects
+
+A **Class** is a blueprint for creating objects.
+
+An **Object** is an instance of a class.
+
+Example:
+
+```python
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+student1 = Student("Ali", 21)
+
+print(student1.name)
+```
+
+✔️ `Student` → Class
+✔️ `student1` → Object
+
+---
+
+## 2️⃣ Encapsulation 🔒
+
+Encapsulation means **bundling data and methods together** inside a class and controlling access to them.
+
+It helps protect data from unintended modification.
+
+Example:
+
+```python
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance   # private variable
+
+    def deposit(self, amount):
+        self.__balance += amount
+
+    def get_balance(self):
+        return self.__balance
+```
+
+Here:
+
+* `__balance` is **private**
+* Access happens through **methods**
+
+---
+
+## 3️⃣ Inheritance 🧬
+
+Inheritance allows a class to **inherit properties and methods from another class**.
+
+This promotes **code reuse**.
+
+Example:
+
+```python
+class Animal:
+    def speak(self):
+        print("Animal makes a sound")
+
+class Dog(Animal):
+    def bark(self):
+        print("Dog barks")
+```
+
+`Dog` inherits from `Animal`.
+
+---
+
+## 4️⃣ Polymorphism 🔄
+
+Polymorphism means **different objects can use the same method name but behave differently**.
+
+Example:
+
+```python
+class Cat:
+    def sound(self):
+        print("Meow")
+
+class Dog:
+    def sound(self):
+        print("Bark")
+
+animals = [Cat(), Dog()]
+
+for animal in animals:
+    animal.sound()
+```
+
+Each object responds differently to the **same method**.
+
+---
+
+## 5️⃣ Abstraction 🎭
+
+Abstraction means **hiding complex implementation details** and showing only the essential features.
+
+Example using abstract classes:
+
+```python
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+
+    @abstractmethod
+    def area(self):
+        pass
+```
+
+Any class inheriting from `Shape` must implement the **area method**.
+
+---
+
+# 🚀 Why OOP is Important
+
+OOP helps developers:
+
+* Organize complex programs
+* Reuse code efficiently
+* Improve maintainability
+* Build scalable software systems
+
+Many modern frameworks rely heavily on **Object-Oriented design principles**.
+
+---
 
 # 📌 Why This Repository Exists
 
