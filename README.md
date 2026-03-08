@@ -60,7 +60,6 @@ The **mode** determines what we want to do with the file.
 The following diagram explains how Python decides which file mode should be used depending on the purpose (reading, writing, or both).
 <img width="1050" height="605" alt="Screenshot 2026-03-08 051733" src="https://github.com/user-attachments/assets/aff86b45-033b-4a0d-8977-66351cce2bca" />
 
-![File Opening Modes](images/file_modes_flowchart.png)
 
 ---
 
